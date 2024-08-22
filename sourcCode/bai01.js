@@ -189,4 +189,4 @@ checkWinner(576, 111);
 
 // 5. Ignore draws this time
 checkWinner(111, 111);
-console.log("-----------05--------");
+console.log("-----------P2-01--------");
