@@ -283,3 +283,33 @@
     }
 
     console.log("-----------P2-03--------");
+
+    // Challenge 04
+    // Let's improve Steven's tip calculator even more, this time using loops!
+    // Your tasks:
+    // 1. Create an array 'bills' containing all 10 test bill values
+    // 2. Create empty arrays for the tips and the totals ('tips' and 'totals')
+    // 3. Use the 'calcTip' function we wrote before (no need to repeat) to calculate
+    // tips and total values (bill + tip) for every bill value in the bills array. Use a for
+    // loop to perform the 10 calculations!
+    // Test data: 22, 295, 176, 440, 37, 105, 10, 1100, 86 and 52
+
+    // 1. Create an array 'bills' containing all 10 test bill values
+    const bills1 = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+
+    // 2. Create empty arrays for the tips and the totals ('tips' and 'totals')
+    const tips1 = [];
+    const totals1 = [];
+
+    // 3. Use the 'calcTip' function we wrote before (no need to repeat) to calculateq
+    // tips and total values (bill + tip) for every bill value in the bills array. Use a for
+    // loop to perform the 10 calculations!
+
+    for (let i = 0; i < bills1.length; i++) {
+        const tip = calcTip1(bills1[i]);
+        tips1.push(tip);
+        totals1.push(tip + bills1[i]);
+    }
+
+    console.log(bills1, tips1, totals1);
+    console.log("-----------P2-04--------");
