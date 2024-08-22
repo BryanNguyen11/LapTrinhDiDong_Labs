@@ -31,7 +31,7 @@ let johnBMI = johnMass / johnHeight ** 2;
 // whether Mark has a higher BMI than John.
 let markHigherBMI = markBMI > johnBMI;
 console.log(markHigherBMI);
-console.log("-------------------");
+console.log("------------01-------");
 
 
 // Chalelnge 2
@@ -46,7 +46,7 @@ if (markHigherBMI) {
 } else {
     console.log(`John's BMI (${johnBMI}) is higher than Mark's (${markBMI})!`);
 }
-console.log("-------------------");
+console.log("----------02--------");
 
 //Challenge 3
 // There are two gymnastics teams, Dolphins and Koalas. They compete against each
@@ -125,7 +125,7 @@ else if (dolphinsAverage2 === koalasAverage2 && dolphinsAverage2 >= 100 && koala
 else {
     console.log('No one wins the trophy 😭');
 }
-console.log("-------------------");
+console.log("------------03-------");
 
 // Challenge 4
 // Steven wants to build a very simple tip calculator for whenever he goes eating in a
@@ -146,5 +146,47 @@ console.log("-------------------");
 let bill = 275;
 let tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.20;
 console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`);
-console.log("-------------------");
+console.log("-----------04-------");
 
+
+// PART 02
+// Challenge 5
+// 1. Create an arrow function 'calcAverage' to calculate the average of 3 scores
+// 2. Use the function to calculate the average for both teams
+// 3. Create a function 'checkWinner' that takes the average score of each team
+// as parameters ('avgDolhins' and 'avgKoalas'), and then logs the winner
+// to the console, together with the victory points, according to the rule above.
+// Example: "Koalas win (30 vs. 13)"
+// 4. Use the 'checkWinner' function to determine the winner for both Data 1 and
+// Data 2
+// 5. Ignore draws this time
+
+// 1. Create an arrow function 'calcAverage' to calculate the average of 3 scores
+const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
+
+// 2. Use the function to calculate the average for both teams
+let avgDolphins = calcAverage(44, 23, 71);
+let avgKoalas = calcAverage(65, 54, 49);
+console.log(avgDolphins, avgKoalas);
+
+// 3. Create a function 'checkWinner' that takes the average score of each team
+// as parameters ('avgDolhins' and 'avgKoalas'), and then logs the winner
+// to the console, together with the victory points, according to the rule above.
+// Example: "Koalas win (30 vs. 13)"
+const checkWinner = function (avgDolphins, avgKoalas) {
+    if (avgDolphins >= 2 * avgKoalas) {
+        console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
+    } else if (avgKoalas >= 2 * avgDolphins) {
+        console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`);
+    } else {
+        console.log('No team wins...');
+    }
+}
+
+// 4. Use the 'checkWinner' function to determine the winner for both Data 1 and Data 2
+checkWinner(avgDolphins, avgKoalas);
+checkWinner(576, 111);
+
+// 5. Ignore draws this time
+checkWinner(111, 111);
+console.log("-----------05--------");
